@@ -5,8 +5,11 @@ include_once ('../../helpers/database.php');
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
+    $post_id = $_POST['post_id'];
     $title = $_POST['title'];
     $content = $_POST['content'];
+
+    
 
     //  Configuração para o upload da imagem
     $targetDir = "../../src/img/receitas/";

@@ -1,16 +1,13 @@
 <?php
 
-// Definindo informações da página em um array associativo
 $pageInfo = array(
     'title' => 'Listagem de Comentários',
     'description' => 'Visualize e gerencie os comentários nas postagens.',
     'pageName' => 'comments',
 );
 
-// Obtendo o nome da página a partir do array
 $pageName = $pageInfo['pageName'];
 
-// Incluindo o cabeçalho da página (header.php)
 include_once('../components/admin/header.php');
 ?>
 
@@ -20,21 +17,16 @@ include_once('../components/admin/header.php');
         <!-- Sidebar do dashboard -->
         <div class="col-md-3">
             <?php
-                // Incluindo a barra lateral do menu (menu_sidebar.php)
                 include_once('../components/admin/menu_sidebar.php');
             ?>
         </div>
         <!-- Main do dashboard -->
         <section class="col-md-9">
-            <!-- Título e descrição da página dinâmicos -->
             <h2><?= $pageInfo['title'] ?></h2>
             <p><?= $pageInfo['description'] ?></p>
             <hr>
-
-            <!-- Conteúdo principal da página -->
             <div class="card">
                 <div class="card-body">
-                    <!-- Tabela para exibir os comentários -->
                     <table class="table table-hover table-striped">
                         <thead>
                             <tr>
@@ -47,7 +39,6 @@ include_once('../components/admin/header.php');
                             </tr>
                         </thead>
                         <tbody>
-                            <!-- Exemplo de uma linha de comentário, você pode adicionar mais conforme necessário -->
                             <tr>
                                 <td>1</td>
                                 <td>Receita de Massa</td>
@@ -55,7 +46,6 @@ include_once('../components/admin/header.php');
                                 <td>Delicioso! Vou experimentar em casa.</td>
                                 <td>01/01/2023</td>
                                 <td>
-                                    <!-- Dropdown de ações para o comentário -->
                                     <div class="dropdown">
                                         <button class="btn btn-sm btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             Ações
@@ -81,4 +71,11 @@ include_once('../components/admin/header.php');
                         </tbody>
                     </table>
                 </div>
-         
+            </div>
+        </section>
+    </div>
+</main>
+
+<?php
+include_once('../components/admin/footer.php');
+?>
